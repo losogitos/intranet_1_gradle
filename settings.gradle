@@ -1,0 +1,3 @@
+include ':librarypickers'
+include ':libraryviewpager'
+include ':intranet'

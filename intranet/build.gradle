@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.stxnext.management.android"
+        minSdkVersion 10
+        targetSdkVersion 22
+
+        testApplicationId "com.stxnext.management.android.test"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/notice.txt'
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':libraryviewpager')
+    compile project(':librarypickers')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.google.guava:guava:12.0.1'
+    compile 'joda-time:joda-time:2.3'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'com.android.support:support-v4:22.1.1'
+    compile 'com.google.android.gms:play-services-gcm:7.3.0'
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/httpmime-4.2.5.jar')
+}

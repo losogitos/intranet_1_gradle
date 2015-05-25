@@ -1,0 +1,59 @@
+create table intranet_user(
+
+external_id integer not null,
+name text,
+title text,
+img text,
+avatar_url text,
+location text,
+freelancer integer,
+is_client integer,
+is_active integer,
+start_work integer,
+start_full_time_work integer,
+phone text,
+phone_on_desk text,
+skype text,
+irc text,
+email text,
+tasks_link text,
+availability_link text,
+roles text,
+groups text,
+
+primary key(external_id)
+);
+
+create index intranet_user_id on intranet_user(external_id);
+
+
+create table absence(
+
+absence_id integer not null,
+end text,
+start text,
+name text,
+user_id integer,
+remarks text,
+
+primary key(absence_id)
+);
+
+create index absence_id on absence(absence_id);
+
+
+create table lateness(
+
+late_id integer not null,
+end text,
+start text,
+name text,
+user_id integer,
+explanation text,
+work_from_home integer,
+
+primary key(late_id)
+);
+
+create index late_id on lateness(late_id);
+

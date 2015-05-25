@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/dateRow"
+                android:padding="@dimen/form_row_padding"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="left"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:text="@string/label_date" />
+
+                <com.stxnext.management.android.ui.dependencies.TouchResistantEditText
+                    android:id="@+id/oooDateView"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:editable="false"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:text="05/03/2014" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/startTimeRow"
+                android:padding="@dimen/form_row_padding"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="left"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:text="@string/label_start_time" />
+
+                <com.stxnext.management.android.ui.dependencies.TouchResistantEditText
+                    android:id="@+id/startTimeView"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:editable="false"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:text="09:00" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/endTimeRow"
+                android:padding="@dimen/form_row_padding"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="left"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:text="@string/label_end_time" />
+
+                <com.stxnext.management.android.ui.dependencies.TouchResistantEditText
+                    android:id="@+id/endTimeView"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:editable="false"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:text="10:00" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/workFromHomeRow"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/form_row_padding"
+                android:paddingRight="@dimen/form_row_padding"
+                android:paddingTop="5dp"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="left"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:text="@string/label_work_from_home" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="right" >
+
+                    <ImageView
+                        android:id="@+id/workFromHomeCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:src="@drawable/checkbox_levels" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/oooExplanationRow"
+                android:padding="@dimen/form_row_padding"
+                android:weightSum="1" >
+
+                <EditText
+                    android:id="@+id/oooExplanationView"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_filed_bkg"
+                    android:gravity="top|left"
+                    android:hint="@string/label_explanation"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:minLines="8"
+                    android:textSize="@dimen/form_label_text_size"
+                    android:padding="15dp"
+                    android:singleLine="false" />
+            </TableRow>
+            <TableRow
+                android:gravity="right"
+                android:padding="@dimen/form_row_padding"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/oooSubmitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/label_submit_capital"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>
